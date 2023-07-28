@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.41 build 20230208172133 
-                                                                                               Thu Jul 27 22:38:05 2023
+                                                                                               Thu Jul 27 23:27:48 2023
 
 Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og9 
      1                           	processor	16F616
@@ -244,28 +244,28 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og9
    230                           ;millis.c: 55: PORTCbits.RC3 = 1;
    231     0067  1587               	bsf	7,3	;volatile
    232                           
-   233                           ;millis.c: 56: delay_ms(100);
+   233                           ;millis.c: 56: delay_ms(1);
    234     0068  3000               	movlw	0
    235     0069  00A7               	movwf	delay_ms@ms+3
    236     006A  3000               	movlw	0
    237     006B  00A6               	movwf	delay_ms@ms+2
    238     006C  3000               	movlw	0
    239     006D  00A5               	movwf	delay_ms@ms+1
-   240     006E  3064               	movlw	100
+   240     006E  3001               	movlw	1
    241     006F  00A4               	movwf	delay_ms@ms
    242     0070  2011               	fcall	_delay_ms
    243                           
    244                           ;millis.c: 57: PORTCbits.RC3 = 0;
    245     0071  1187               	bcf	7,3	;volatile
    246                           
-   247                           ;millis.c: 58: delay_ms(100);
+   247                           ;millis.c: 58: delay_ms(1);
    248     0072  3000               	movlw	0
    249     0073  00A7               	movwf	delay_ms@ms+3
    250     0074  3000               	movlw	0
    251     0075  00A6               	movwf	delay_ms@ms+2
    252     0076  3000               	movlw	0
    253     0077  00A5               	movwf	delay_ms@ms+1
-   254     0078  3064               	movlw	100
+   254     0078  3001               	movlw	1
    255     0079  00A4               	movwf	delay_ms@ms
    256     007A  2011               	fcall	_delay_ms
    257     007B  2867               	goto	l571
@@ -316,14 +316,14 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og9
    302                           ;millis.c: 22: OPTION_REGbits.PSA = 0;
    303     0090  1181               	bcf	1,3	;volatile
    304                           
-   305                           ;millis.c: 23: OPTION_REGbits.PS = 0b010;
+   305                           ;millis.c: 23: OPTION_REGbits.PS = 0b001;
    306     0091  0801               	movf	1,w	;volatile
    307     0092  39F8               	andlw	-8
-   308     0093  3802               	iorlw	2
+   308     0093  3801               	iorlw	1
    309     0094  0081               	movwf	1	;volatile
    310                           
-   311                           ;millis.c: 24: TMR0 = 9;
-   312     0095  3009               	movlw	9
+   311                           ;millis.c: 24: TMR0 = 125;
+   312     0095  307D               	movlw	125
    313     0096  1283               	bcf	3,5	;RP0=0, select bank0
    314     0097  0081               	movwf	1	;volatile
    315                           
@@ -567,8 +567,8 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og9
    553     0057  3001               	movlw	1
    554     0058  07F9               	addwf	_millisCount+3,f	;volatile
    555                           
-   556                           ;millis.c: 33: TMR0 = 9;
-   557     0059  3009               	movlw	9
+   556                           ;millis.c: 33: TMR0 = 125;
+   557     0059  307D               	movlw	125
    558     005A  1283               	bcf	3,5	;RP0=0, select bank0
    559     005B  0081               	movwf	1	;volatile
    560     005C                     i1l23:
@@ -719,7 +719,7 @@ DATA                 0      0      1A       8        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.41 build 20230208172133 
-Symbol Table                                                                                   Thu Jul 27 22:38:05 2023
+Symbol Table                                                                                   Thu Jul 27 23:27:48 2023
 
                      u61 002A                       u62 002B                       u63 0030  
                      u64 0031                       u65 0036                       u66 0037  
