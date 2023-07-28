@@ -13,14 +13,14 @@
 #pragma config BOREN = OFF      // Brown-out Reset Selection bits (BOR Disabled)
 
 #define _XTAL_FREQ 8000000
-#define initialValue 21
+#define initialValue 9
 
 volatile uint32_t millisCount = 0;
 
 void millisInit() {
 	OPTION_REGbits.T0CS = 0;    // Use internal clock (Fosc/4)
     OPTION_REGbits.PSA = 0;     // Assign prescaler to Timer0
-    OPTION_REGbits.PS = 0b000;  // Prescaler 1:64
+    OPTION_REGbits.PS = 0b010;  // Prescaler 1:8
     TMR0 = initialValue;
     INTCONbits.T0IE = 1;        // Enable Timer0 interrupt
     INTCONbits.GIE = 1;         // Enable global interrupts
@@ -53,8 +53,8 @@ void main() {
 
     while (1) {
         PORTCbits.RC3 = 1;
-        delay_ms(4);
+        delay_ms(100);
         PORTCbits.RC3 = 0;
-        delay_ms(4);
+        delay_ms(100);
     }
 }

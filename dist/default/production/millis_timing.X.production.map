@@ -5,9 +5,9 @@ Linker command line:
 --edf=C:\Program Files\Microchip\xc8\v2.41\pic\dat\20230208172133_en.msgs \
   -cn -h+dist/default/production\millis_timing.X.production.sym \
   --cmf=dist/default/production\millis_timing.X.production.cmf -z -Q16F616 \
-  -oC:\Users\Umair\AppData\Local\Temp\xcAsdss.\driver_tmp_3.obj \
+  -oC:\Users\Umair\AppData\Local\Temp\xcAsc2s.\driver_tmp_3.obj \
   -Mdist/default/production/millis_timing.X.production.map \
-  --md=C:\Users\Umair\AppData\Local\Temp\xcAsdss.\driver_tmp_0.dat -E1 \
+  --md=C:\Users\Umair\AppData\Local\Temp\xcAsc2s.\driver_tmp_0.dat -E1 \
   -ver=XC8 Compiler -ACODE=00h-07FFh -ASTRCODE=00h-07FFh \
   -ASTRING=00h-0FFhx8 -ACONST=00h-0FFhx8 -AENTRY=00h-0FFhx8 \
   -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0BFh \
@@ -16,7 +16,7 @@ Linker command line:
   -DIDLOC=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
   -pfunctab=ENTRY -k \
-  C:\Users\Umair\AppData\Local\Temp\xcAsdss.\driver_tmp_9.obj \
+  C:\Users\Umair\AppData\Local\Temp\xcAsc2s.\driver_tmp_9.obj \
   dist/default/production\millis_timing.X.production.obj 
 
 Object code version is 3.11
@@ -26,7 +26,7 @@ Machine type is 16F616
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Umair\AppData\Local\Temp\xcAsdss.\driver_tmp_9.obj
+C:\Users\Umair\AppData\Local\Temp\xcAsc2s.\driver_tmp_9.obj
                 end_init                              A        A        1        8       0
                 reset_vec                             0        0        1        0       0
                 config                             2007     2007        1        0       4
@@ -37,7 +37,7 @@ dist/default/production\millis_timing.X.production.obj
                 text4                                48       48       1B        8       0
                 text3                                7C       7C       13        8       0
                 text2                                11       11       37        8       0
-                text1                                8F       8F        A        8       0
+                text1                                8F       8F        C        8       0
                 maintext                             63       63       19        8       0
                 cstackBANK0                          20       20       10       20       1
                 cstackCOMMON                         70       70        6       70       1
@@ -52,7 +52,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text4                                48       48       1B         0
                 text3                                7C       7C       13         0
                 text2                                11       11       37         0
-                text1                                8F       8F        A         0
+                text1                                8F       8F        C         0
                 maintext                             63       63       19         0
 
         CLASS   STRCODE        
@@ -95,7 +95,7 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000001  000001         0       0  CODE        2
-                intentry                       000004  000095  000099         8       0  CODE        2
+                intentry                       000004  000097  00009B         8       0  CODE        2
                 cstackBANK0                    000020  000010  000030        20       1  BANK0       1
                 cstackCOMMON                   000070  00000A  00007A        70       1  COMMON      1
 
@@ -106,21 +106,21 @@ UNUSED ADDRESS RANGES
         BANK0            0030-006F             40           1
         BANK1            00A0-00BF             20           1
         CODE             0001-0003              3           2
-                         0099-07FF            767
+                         009B-07FF            765
         COMMON           007A-007D              4           1
         CONST            0001-0003              3           2
-                         0099-07FF            100
+                         009B-07FF            100
         ENTRY            0001-0003              3           2
-                         0099-07FF            100
+                         009B-07FF            100
         IDLOC            2000-2003              4           2
         RAM              0030-006F             40           1
                          00A0-00BF             20
         SFR0             0000-001F             20           1
         SFR1             0080-009F             20           1
         STRCODE          0001-0003              3           2
-                         0099-07FF            767
+                         009B-07FF            765
         STRING           0001-0003              3           2
-                         0099-07FF            100
+                         009B-07FF            100
 
                                   Symbol Table
 
@@ -154,7 +154,7 @@ __Hram                   ram          0000
 __Hreset_vec             reset_vec    0001
 __Hsfr0                  sfr0         0000
 __Hsfr1                  sfr1         0000
-__Hspace_0               (abs)        0099
+__Hspace_0               (abs)        009B
 __Hspace_1               (abs)        007A
 __Hspace_2               (abs)        0000
 __Hspace_3               (abs)        0000
@@ -193,7 +193,7 @@ __Lspace_4               (abs)        0000
 __Lstack                 stack        0000
 __Lstrings               strings      0000
 __Ltext                  text         0000
-__S0                     (abs)        0099
+__S0                     (abs)        009B
 __S1                     (abs)        007A
 ___int_sp                stack        0000
 ___latbits               (abs)        0000
@@ -205,7 +205,7 @@ __end_of_delay_ms        text2        0048
 __end_of_isr             text4        0063
 __end_of_main            maintext     007C
 __end_of_millis          text3        008F
-__end_of_millisInit      text1        0099
+__end_of_millisInit      text1        009B
 __initialization         cinit        000B
 __pbssCOMMON             bssCOMMON    0076
 __pcstackBANK0           cstackBANK0  0020
@@ -246,12 +246,12 @@ MODULE INFORMATION
 Module		Function		Class		Link	Load	Size
 millis.c
 		_millis        		CODE           	007C	0000	19
-		_millisInit    		CODE           	008F	0000	10
+		_millisInit    		CODE           	008F	0000	12
 		_main          		CODE           	0063	0000	25
 		_isr           		CODE           	0048	0000	27
 		_delay_ms      		CODE           	0011	0000	55
 
-millis.c estimated size: 136
+millis.c estimated size: 138
 
 shared
 		__initialization		CODE           	000B	0000	4

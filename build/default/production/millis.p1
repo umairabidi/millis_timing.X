@@ -1062,12 +1062,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;millis.c: 22: OPTION_REGbits.PSA = 0;
 "22
 [e = . . _OPTION_REGbits 0 1 -> -> 0 `i `uc ]
-[; ;millis.c: 23: OPTION_REGbits.PS = 0b000;
+[; ;millis.c: 23: OPTION_REGbits.PS = 0b010;
 "23
-[e = . . _OPTION_REGbits 0 0 -> -> 0 `i `uc ]
-[; ;millis.c: 24: TMR0 = 21;
+[e = . . _OPTION_REGbits 0 0 -> -> 2 `i `uc ]
+[; ;millis.c: 24: TMR0 = 9;
 "24
-[e = _TMR0 -> -> 21 `i `uc ]
+[e = _TMR0 -> -> 9 `i `uc ]
 [; ;millis.c: 25: INTCONbits.T0IE = 1;
 "25
 [e = . . _INTCONbits 1 3 -> -> 1 `i `uc ]
@@ -1095,9 +1095,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;millis.c: 32: millisCount++;
 "32
 [e ++ _millisCount -> -> -> 1 `i `l `ul ]
-[; ;millis.c: 33: TMR0 = 21;
+[; ;millis.c: 33: TMR0 = 9;
 "33
-[e = _TMR0 -> -> 21 `i `uc ]
+[e = _TMR0 -> -> 9 `i `uc ]
 "34
 }
 [e :U 97 ]
@@ -1175,15 +1175,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;millis.c: 55: PORTCbits.RC3 = 1;
 "55
 [e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
-[; ;millis.c: 56: delay_ms(4);
+[; ;millis.c: 56: delay_ms(100);
 "56
-[e ( _delay_ms (1 -> -> -> 4 `i `l `ul ]
+[e ( _delay_ms (1 -> -> -> 100 `i `l `ul ]
 [; ;millis.c: 57: PORTCbits.RC3 = 0;
 "57
 [e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
-[; ;millis.c: 58: delay_ms(4);
+[; ;millis.c: 58: delay_ms(100);
 "58
-[e ( _delay_ms (1 -> -> -> 4 `i `l `ul ]
+[e ( _delay_ms (1 -> -> -> 100 `i `l `ul ]
 "59
 }
 [e :U 104 ]

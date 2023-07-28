@@ -1671,8 +1671,8 @@ volatile uint32_t millisCount = 0;
 void millisInit() {
 OPTION_REGbits.T0CS = 0;
 OPTION_REGbits.PSA = 0;
-OPTION_REGbits.PS = 0b000;
-TMR0 = 21;
+OPTION_REGbits.PS = 0b010;
+TMR0 = 9;
 INTCONbits.T0IE = 1;
 INTCONbits.GIE = 1;
 }
@@ -1681,7 +1681,7 @@ void __interrupt() isr() {
 if (INTCONbits.T0IF) {
 INTCONbits.T0IF = 0;
 millisCount++;
-TMR0 = 21;
+TMR0 = 9;
 }
 }
 
@@ -1704,8 +1704,8 @@ millisInit();
 
 while (1) {
 PORTCbits.RC3 = 1;
-delay_ms(4);
+delay_ms(100);
 PORTCbits.RC3 = 0;
-delay_ms(4);
+delay_ms(100);
 }
 }
