@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.41 build 20230208172133 
-                                                                                               Thu Jul 27 23:27:48 2023
+                                                                                               Fri Jul 28 20:25:37 2023
 
 Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og9 
      1                           	processor	16F616
@@ -322,8 +322,8 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og9
    308     0093  3801               	iorlw	1
    309     0094  0081               	movwf	1	;volatile
    310                           
-   311                           ;millis.c: 24: TMR0 = 125;
-   312     0095  307D               	movlw	125
+   311                           ;millis.c: 24: TMR0 = 163;
+   312     0095  30A3               	movlw	163
    313     0096  1283               	bcf	3,5	;RP0=0, select bank0
    314     0097  0081               	movwf	1	;volatile
    315                           
@@ -567,8 +567,8 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og9
    553     0057  3001               	movlw	1
    554     0058  07F9               	addwf	_millisCount+3,f	;volatile
    555                           
-   556                           ;millis.c: 33: TMR0 = 125;
-   557     0059  307D               	movlw	125
+   556                           ;millis.c: 33: TMR0 = 163;
+   557     0059  30A3               	movlw	163
    558     005A  1283               	bcf	3,5	;RP0=0, select bank0
    559     005B  0081               	movwf	1	;volatile
    560     005C                     i1l23:
@@ -719,7 +719,7 @@ DATA                 0      0      1A       8        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.41 build 20230208172133 
-Symbol Table                                                                                   Thu Jul 27 23:27:48 2023
+Symbol Table                                                                                   Fri Jul 28 20:25:37 2023
 
                      u61 002A                       u62 002B                       u63 0030  
                      u64 0031                       u65 0036                       u66 0037  

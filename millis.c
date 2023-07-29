@@ -13,14 +13,14 @@
 #pragma config BOREN = OFF      // Brown-out Reset Selection bits (BOR Disabled)
 
 #define _XTAL_FREQ 8000000
-#define initialValue 125
+#define initialValue 163
 
 volatile uint32_t millisCount = 0;
 
 void millisInit() {
 	OPTION_REGbits.T0CS = 0;    // Use internal clock (Fosc/4)
     OPTION_REGbits.PSA = 0;     // Assign prescaler to Timer0
-    OPTION_REGbits.PS = 0b001;  // Prescaler 1:8
+    OPTION_REGbits.PS = 0b001;  // Prescaler 1:4
     TMR0 = initialValue;
     INTCONbits.T0IE = 1;        // Enable Timer0 interrupt
     INTCONbits.GIE = 1;         // Enable global interrupts
